@@ -55,7 +55,6 @@ class PostVC: UIViewController {
     init(model: UserPost) {
         self.model = model
         super.init(nibName: nil, bundle: nil)
-        configureModels()
     }
     
     required init?(coder: NSCoder) {
@@ -87,6 +86,7 @@ class PostVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureModels()
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
